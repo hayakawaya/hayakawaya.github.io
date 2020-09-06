@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Folding Beijing</title>
+	<style type="text/css">
+		*{  
+            margin: 0px;  
+            padding: 0px;  
+        }  
+        video{  
+            position: fixed;  
+            right: 0px;  
+            bottom: 0px;  
+            min-width: 100%;  
+            min-height: 100%;  
+            height: auto;  
+            width: auto;  
+        }  
+        source{  
+            min-width: 100%;  
+            min-height: 100%;  
+            height: auto;  
+            width: auto;  
+        }  
+	</style>
+</head>
+<body>
+    <script type="text/javascript">
+    window.onload = function () {
+    var videoPlayer = document.getElementById("video");
+    videoPlayer.addEventListener("timeupdate", function () {
+         if(videoPlayer.currentTime>10){
+              window.location.href="./3.html";
+         }
+    }, false);
+    };
+    </script>
+
+	<video id="video" autoplay="autoplay">  
+   	 	<source  src="video/2-3.mp4" type="video/mp4" >;  
+	</video> 
+</body>
